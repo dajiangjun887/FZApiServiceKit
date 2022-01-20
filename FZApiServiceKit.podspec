@@ -8,8 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FZApiServiceKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of FZApiServiceKit.'
+  s.version          = '0.0.1'
+  s.summary          = '网络库 FZApiServiceKit.'
+  s.swift_version    = ['4.0', '4.2', '5.0']
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +19,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+基于Moya封装的网络请求库，公共方法统一解析方便项目使用
                        DESC
 
   s.homepage         = 'https://github.com/dajiangjun887/FZApiServiceKit'
@@ -28,7 +29,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/dajiangjun887/FZApiServiceKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'FZApiServiceKit/Classes/**/*'
   
@@ -38,5 +39,7 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'ReachabilitySwift', '~> 5.0.0'
+  s.dependency 'Moya', '~> 15.0.0'
+  s.dependency 'HandyJSON', '~> 5.0.2'
 end

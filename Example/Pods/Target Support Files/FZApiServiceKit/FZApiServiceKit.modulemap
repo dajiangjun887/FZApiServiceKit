@@ -1,0 +1,6 @@
+framework module FZApiServiceKit {
+  umbrella header "FZApiServiceKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
